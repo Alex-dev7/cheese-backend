@@ -34,7 +34,7 @@ const Cheeses = mongoose.model("Cheeses", CheesesSchema)
 // midleware
 app.use(cors())
 app.use(express.json())
-
+app.use(morgan("dev"))
 
 // routes
 app.get('/', (req, res) => {
