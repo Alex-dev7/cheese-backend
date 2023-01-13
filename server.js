@@ -81,7 +81,7 @@ app.delete('/cheese/:id', async (req, res) => {
 })
 
 // find by id
-app.get('cheese/:id', async (req, res) => {
+app.get('/cheese/:id', async (req, res) => {
     try{
         res.json(await Cheeses.findById(req.params.id))
     }catch(error){
