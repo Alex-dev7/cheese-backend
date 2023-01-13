@@ -62,7 +62,7 @@ app.post('/cheese', async (req, res) => {
 
 
 // update route
-app.post('/cheese/:id', async (req, res) => {
+app.put('/cheese/:id', async (req, res) => {
     try {
         res.json(await Cheeses.findByIdAndUpdate(req.params.id, req.body, {new: true}))
     } catch(error) {
